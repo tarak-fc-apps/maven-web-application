@@ -21,7 +21,7 @@ stage('ExecuteSonarqubeReport')
 stage('DeployApplicationIntoTomcatServer')
  {
  sshagent(['bd396e66-b639-4107-bcd4-34322b2c00ca']) {
-   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.234.17.232:/opt/apache-tomcat-9.0.45/webapps/"
+   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.26.25:/opt/apache-tomcat-9.0.45/webapps/"
 }
 }
  stage('SendEmailNotification')
